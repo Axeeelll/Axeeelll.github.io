@@ -3,23 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello, Axel</title>
+    <title>Axel | 个人博客</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #f8f9fa;
+        }
+        /* 添加代码块的样式 */
+        pre {
+            background-color: #f1f3f5;
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        code {
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+        }
+        .prose h3 {
+            margin-top: 2em;
+            margin-bottom: 1em;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
-    <main class="h-screen flex items-center justify-center">
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
-            Hello, Axel
-        </h1>
+<body class="text-gray-800">
+
+    <!-- 导航栏 -->
+    <header class="bg-white/90 backdrop-blur-lg border-b border-gray-200/80 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-gray-900 tracking-wide">
+                <a href="#">Axel</a>
+            </h1>
+            <nav class="hidden md:flex space-x-10">
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">首页</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">分类</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">关于</a>
+            </nav>
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 博主个人主页 -->
+    <section class="bg-white py-20 sm:py-24 border-b border-gray-200/80">
+        <div class="container mx-auto px-6 text-center">
+            <img class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-5 border-4 border-white shadow-xl" src="https://placehold.co/128x128/e2e8f0/333333?text=头像" alt="博主头像">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">你好, 我是 Axel</h2>
+            <p class="mt-4 text-md sm:text-lg text-gray-500 max-w-2xl mx-auto">
+                一名热爱代码与算法的大二学生。很高兴在这里与你相遇，希望我的学习笔记能给你带来一些启发和帮助。
+            </p>
+            <div class="mt-8 flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-gray-800 transition-colors duration-300" title="GitHub">
+                    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="mailto:your-email@example.com" class="text-gray-400 hover:text-gray-800 transition-colors duration-300" title="Email">
+                    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主体内容 -->
+    <main class="container mx-auto px-6 py-16">
+        <div class="lg:flex lg:justify-center">
+            <div class="lg:w-full lg:max-w-3xl">
+
+                <!-- 博文 -->
+                <article class="bg-white p-8 sm:p-12 rounded-2xl shadow-lg transition-shadow duration-300 hover:shadow-2xl mb-8">
+                    <header>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-3">
+                            <a href="#">初识二分查找：对半折的艺术</a>
+                        </h2>
+                        <div class="text-sm text-gray-500 mb-6">
+                            <span>发布于 2025年9月15日</span> &bull; 
+                            <span>分类: <a href="#" class="text-blue-600 hover:underline">基础算法</a></span>
+                        </div>
+                    </header>
+                    
+                    <div class="prose max-w-none text-gray-700 space-y-4">
+                        <p>大家好！这是我的第一篇算法博客。作为一个正在学习数据结构与算法的大二学生，我想用最简单的方式来分享我学到的东西，希望我们能一起进步！</p>
+                        <p>今天我们来聊聊“二分查找”。第一次听到这个名字，你可能会觉得有点专业，但它的核心思想你肯定玩过——就是“猜数字”游戏！</p>
+                        
+                        <h3 class="text-xl font-semibold text-gray-800">生活中的例子：猜数字</h3>
+                        <p>想象一下，我和你玩一个游戏：我在心里想一个 1 到 100 之间的数字，你来猜。你每猜一个数，我只会告诉你“猜大了”、“猜小了”或者“猜对了”。</p>
+                        <p>你怎么猜才能最快猜中呢？</p>
+                        <p>如果你从 1, 2, 3... 这样一个个猜，运气最差可能要猜 100 次。但聪明的你肯定会先猜 50，对吧？</p>
+                        <ul class="list-disc list-inside">
+                            <li>如果我说“猜小了”，你就知道答案在 51 到 100 之间，范围缩小了一半。</li>
+                            <li>如果我说“猜大了”，那答案就在 1 到 49 之间，范围也缩小了一半。</li>
+                        </ul>
+                        <p>接下来，你会在新的范围里继续取中间数来猜，比如在 51 到 100 里猜 75。每次都把搜索范围缩小一半，这就是二分查找的核心！</p>
+
+                        <h3 class="text-xl font-semibold text-gray-800">二分查找的前提</h3>
+                        <p>就像“猜数字”游戏一样，二分查找能玩起来，最关键的一点是：<strong>数据必须是有序的</strong>。比如一个数组，它里面的元素必须是排好序的，我们才能用这种“对半折”的方法来快速定位。</p>
+
+                        <h3 class="text-xl font-semibold text-gray-800">代码怎么写？</h3>
+                        <p>用代码实现起来也不复杂。我们只需要三个“指针”：`left` 指向范围的开头，`right` 指向结尾，`mid` 指向中间。然后不断移动 `left` 和 `right` 来缩小范围。</p>
+                        <p>这里是一个 C++ 的简单实现：</p>
+                        <pre><code class="language-cpp">
+// 在一个有序数组 nums 中查找 target
+// nums: 有序数组
+// target: 要查找的目标值
+int binarySearch(vector&lt;int&gt;& nums, int target) {
+    int left = 0;
+    int right = nums.size() - 1; // 重点：右边界是 size - 1
+
+    while (left <= right) { // 重点：循环条件是 left <= right
+        int mid = left + (right - left) / 2; // 防止整数溢出
+
+        if (nums[mid] == target) {
+            return mid; // 找到了，返回索引
+        } else if (nums[mid] < target) {
+            left = mid + 1; // 目标在右半部分，移动左边界
+        } else {
+            right = mid - 1; // 目标在左半部分，移动右边界
+        }
+    }
+
+    return -1; // 没找到
+}
+                        </code></pre>
+                        <p>它的时间复杂度是 O(log n)，意思就是数据量很大时，查找速度也飞快。比如在 100 万个数据里找一个数，最多也只需要 20 次左右，是不是很神奇？</p>
+                        <p>好啦，今天就分享到这里。二分查找虽然简单，但有很多细节和变种，以后我们再慢慢探索！</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
     </main>
+
+    <!-- 页脚 -->
+    <footer class="border-t border-gray-200/80 mt-12">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2025 by Axel. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
 
